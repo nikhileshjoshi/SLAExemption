@@ -1,0 +1,6 @@
+CorrelationId: 507c0941-4c2f-4fb7-a052-5bd6098b96dd
+UTC DateTime: 4/13/2018 2:33:28 PM
+
+The following files/folders have not been downloaded
+1. MVCTemplate/App_Data/TestExcel.xlsx
+2. packages/Microsoft.Net.Compilers.1.0.0/ThirdPartyNotices.rtf

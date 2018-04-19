@@ -1,0 +1,52 @@
+﻿@model SLAExemptionTool.Models.User
+
+@{
+    Layout = null;
+}
+@using (Html.BeginForm("Validate", "User"))
+{
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Login</title>
+    </head>
+    <body>
+        <table class="table" align="center">
+
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(model => model.UserName)
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.UserName)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(model => model.Password)
+                </td>
+                <td>
+                    @Html.PasswordFor(model => model.Password)
+                </td>
+            </tr>
+            <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.UserType)
+            </td>
+            <td>
+                @Html.RadioButtonFor(model => model.UserType, "Admin") Admin
+                @Html.RadioButtonFor(model => model.UserType, "User") User
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Login</button>
+                </td>
+            </tr>      
+
+        </table>
+    </body>
+</html>
+}

@@ -1,0 +1,91 @@
+﻿@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>TicketDetails</title>
+    </head>
+    <body>
+
+        <div>
+            @using (Html.BeginForm("TicketDetails", "ImportExport", new { enctype = "multipart/form-data" }))
+            {
+                <div align="left">
+                    @Html.Label("Email ID")
+                </div>
+                <div align="right">
+                    @Html.TextBox("txtEmailId")
+                </div>
+
+                <hr />
+                <input type="submit" value="Fetch Report" id="btnSubmit" />
+                <br />
+
+
+            }
+        </div>
+
+        <div id="partial" style="display: none">
+
+        </div>
+    </body>
+    </html>
+
+
+    @section scripts {
+        <script>
+            $(function () {
+                $('#btnSubmit').on('click', function (e) {
+                    $.post($(this).prop('href'), function (response) {
+                        $('#partial').html(response)
+                    });
+                    e.defaultPrevented();
+                });
+            });
+        </script>
+    }*@
+
+@{
+    ViewBag.Title = "SLA Tool Exemption Import/Export";
+}
+
+
+@model SLAExemptionTool.Models.FileModel
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+
+    <h2>@ViewBag.Title.</h2>
+
+    <p class="text-success">@ViewBag.StatusMessage</p>
+    <div>
+        <ul class="nav navbar-nav navbar-left">
+            @*<li>@Html.ActionLink("Import", "Index", "Home", routeValues: null, htmlAttributes: new { id = "importLink" })</li>
+                <li>@Html.ActionLink("Export", "", "", routeValues: null, htmlAttributes: new { id = "exportLink" })</li>*@
+        </ul>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>Select File:</dt>
+            <dd>
+                <p> @Html.TextBoxFor(m => m.PostedFile, new { type = "file" })<p>
+                <br />
+                @Html.ValidationMessageFor(m => m.PostedFile, "", new { @class = "error" })
+            </dd>
+           
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Import" class="btn btn-default" />
+                </div>
+            </div>
+               
+                <span style="color:green">@Html.Raw(ViewBag.Message)</span>
+
+                @*@Html.Label("Email ID")
+                    @Html.TextBox("txtEmailId")
+                    <hr />
+                    <input type="submit" value="Fetch Report" id="btnSubmit" />*@
+                <br />
+            
+        </dl>
+    </div>
+}

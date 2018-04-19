@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{21FF72CE-211B-4E3A-8D35-6894E3D6A43F}|">
+  <MonoDevelop.Ide.ItemProperties.SLAExemption PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MVCTemplate/Controllers/AccountController.cs">
+    <Files>
+      <File FileName="MVCTemplate/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="MVCTemplate/Controllers/AccountController.cs" Line="20" Column="48" />
+      <File FileName="MVCTemplate/Startup.cs" Line="15" Column="1" />
+      <File FileName="MVCTemplate/Web.config" Line="24" Column="19" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

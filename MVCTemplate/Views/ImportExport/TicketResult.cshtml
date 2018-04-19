@@ -1,0 +1,20 @@
+﻿@model IEnumerable<SLAExemptionTool.Models.TicketDetails>
+
+
+<div></div>
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>Ticket #</th>
+        <th>SLA Name </th>
+       
+    </tr>
+    @foreach (var d in Model)
+    {
+        <tr>
+            <td>@d.TicketNumber</td>
+            <td>@d.SLAName</td>          
+
+        </tr>
+    }
+</table>
+  
